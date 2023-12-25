@@ -1,0 +1,34 @@
+/*Дано четырехзначное число (к примеру 5678),
+вывести на экран  в обратном порядке цифры из которых это число состоит.
+То есть мы должны увидеть на экране 8765. Подсказка:
+чтобы взять из числа отдельные цифры, надо применять  деление по модулю на 10.*/
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(LC_ALL, "ru");
+    int size = 0;
+    cout << "Введите сколько чисел хотите ввести\n";
+    cin >> size;
+    int* array = new int[size];
+    for (int i = 0; i < size; i++) {
+        int num = 0;
+        cout << "Число №" << i + 1 << " = ";
+        cin >> num;
+        array[i] = num;
+    }
+    cout << "Выведем набор чисел который вы ввели :";
+    for (int i = 0; i < size; i++) {
+        cout <<"\t"  <<array[i]<<";";
+        
+    }
+    cout << "\nВыведем обратный набор чисел :";
+
+    for (int i = 1; i < size+1;i++) {
+        cout << "\t" << array[size-i] << ";";
+    }
+    delete[] array;
+    cout << endl << endl;
+    system("pause");
+    return 0;
+}
