@@ -1,0 +1,23 @@
+/* Необходимо суммировать все нечётные целые числа в диапазоне,
+который введёт пользователь с клавиатуры.*/
+#include<iostream>
+using namespace std;
+int main() {
+	setlocale(LC_ALL, "ru");
+	cout << "Введите начало и конец диапазона чисел \n";
+	cout << "все нечётные целые числа будут сумированны\n";
+	int start = 0, end = 0,sum1=0,sum2=0;
+	cout << "Начало диапазона : "; cin >> start;
+	cout << "Конец диапазона : "; cin >> end;
+	for (int i=start;i<=end;i++) {
+		if (i % 2 == 0) {
+			sum1 += i;
+		}
+		else {
+			sum2 += i;
+		}
+	}
+	cout << "\n сумма не чётных чисел : " << sum2 << endl;
+	cout << "\n сумма чётных чисел : " << sum1 << endl;
+	system("pause");
+}
